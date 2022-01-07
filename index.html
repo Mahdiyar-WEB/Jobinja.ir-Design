@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>joninja</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav>
+      <div class="nav-container">
+        <div>
+            <button><ion-icon name="home"></ion-icon>خانه</button>
+            <button><ion-icon name="search"></ion-icon>جستجوی مشاغل</button>
+            <button><ion-icon name="star"></ion-icon>رزومه ساز</button>
+            <button>  <ion-icon name="diamond"></ion-icon>50 شرکت برتر</button>
+            <button><ion-icon name="business"></ion-icon>بخش کارفرمایان</button>
+        </div>
+        <div>
+         <div class="bell-container"> <a href=""><ion-icon id="bell" name="notifications-outline"></ion-icon></a></div>
+          <a href=""><ion-icon name="person"></ion-icon>ثبت نام کارجو</a>
+          <a href=""><ion-icon name="enter"></ion-icon>ورود کارجو</a>
+          <button><h2>joninja</h2></button>
+        </div>
+      </div>
+      <div class="responsive-nav-container">
+        <div class="right">
+          <div id="menu-button"><ion-icon  name="menu"></ion-icon></div>
+          <a href=""><ion-icon name="search"></ion-icon></a>
+        </div>
+        <a href=""><h2>jobinja</h2></a>
+        <a href=""><ion-icon name="person"></ion-icon></a>
+      </div>
+    </nav>
+    <div id="responsive-menu-container">
+      <div id="responsive-menu">
+        <button><ion-icon name="home"></ion-icon>خانه</button>
+          <button><ion-icon name="search"></ion-icon>جستجوی مشاغل</button>
+          <button><ion-icon name="star"></ion-icon>رزومه ساز</button>
+          <button>  <ion-icon name="diamond"></ion-icon>50 شرکت برتر</button>
+          <button><ion-icon name="business"></ion-icon>بخش کارفرمایان</button>
+      </div>
+    </div>
+    <header id="org-header">
+        <div class="about">
+            <h1><a href="">16,315</a>آگهی استخدام فعال در<a href="">6,278</a>شرکت ایرانی</h1>
+            <p>#جابینجا: سامانه کاریابی آنلاین با بیشترین تعداد آگهی استخدام در ایران   </p>
+        </div>
+        <div class="filter">
+            <input type="text" placeholder="عنوان شغلی , مهارت و...">
+            <select name="state"  id="">
+                <option value="">همه استان ها</option>
+                <option value="">خراسان رضوی</option>
+                <option value="">تهران</option>
+                <option value="">شیراز</option>
+                <option value="">بندرعباس</option>
+                <option value="">گیلان</option>
+                <option value="">مازندران</option>
+                <option value="">رشت</option>
+                <option value="">کرمانشاه</option>
+                <option value="">بیرجند</option>
+                <option value="">بجنورد</option>
+                <option value="">سمنان</option>
+                <option value="">زنجان</option>
+                <option value="">اردبیل</option>
+                <option value="">لرستان</option>
+                <option value="">کردستان</option>
+                <option value="">ایلام</option>
+                <option value="">خراسان شمالی</option>
+                <option value="">خراسان جنوبی</option>
+                <option value="">همدان</option>
+            </select>
+            <select name="" id="">
+                <option value="">همه دسته بندی ها</option>
+                <option value="">وب,برنامه نویسی,نرم افزار</option>
+                <option value="">فروش و بازاریابی</option>
+                <option value="">تولید و مدیریت محتوا</option>
+                <option value="">مالی و حسابداری</option>
+                <option value="">مسئول دفتر, اجرائی و اداری</option>
+                <option value="">طراحی</option>
+                <option value="">IT/ DevOps / Server</option>
+                <option value="">مهندس برق و الکترونیک</option>
+                <option value="">خرید و بازرگانی</option>
+            </select>
+            <button>جستجو در مشاغل</button>
+        </div>
+        <div class="send-propozal">
+            <p>آخرین رزومه ارسالی شده به شرکت <a href="">فروشگاه زنبیل</a></p>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <article class="companies">
+                <section class="company">
+                    <img src="./images/main.jpg" alt="">
+                    <a href="">گروه نرم افزاری پارت</a>
+                </section>
+                <section class="company">
+                    <img src="./images/main.png" alt="">
+                    <a href="">هلدینگ شکوه جاوید ایرانیان</a>
+                </section>
+                <section class="company">
+                    <img src="./images/main1.jpg" alt="">
+                    <a href="">زومیت</a>
+                </section>
+                <section class="company">
+                    <img src="./images/main2.jpg" alt="">
+                    <a href="">کارگزاری مفید</a>
+                </section>
+                <section class="company">
+                    <img src="./images/main3.png" alt="">
+                    <a href="">تاپ تیس</a>
+                </section>
+                <section class="company">
+                    <img src="./images/main4.png" alt="">
+                    <a href="">اسنپ مارکت</a>
+                </section>
+            </article>
+            <div class="recruitment-container">
+                <article class="immediate-recruitment">
+                    <header>استخدامی های فوری امروز</header>
+                    <div class="recruitments">
+                        <div class="recruitment">
+                          <a href="">استخدام برنامه نویس fullstack(اصفهان)</a>
+                          <div class="details">
+                              <p><ion-icon name="storefront"></ion-icon>رصد سرمایه هوشمند</p>
+                              <p><ion-icon name="location"></ion-icon>تهران</p>
+                          </div>
+                        </div>
+                        <div class="recruitment">
+                            <a href="">استخدام برنامه نویس fullstack(اصفهان)</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>رصد سرمایه هوشمند</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام کارمند فروش و بازاریابی</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>سهند ارتباط</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام مدیر عملیات حمل و نقل بین المللی</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>تعالی اندیش راه دانش</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام منشی خانم</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>شارمانا</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام کارشناس امور مهاجرتی</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>ستاره دانش پارسیان</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام Senior Front-end Developer</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>کشتیار</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام مسئول دفتر خانم</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>لوتوس بیت</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">اسخدام کارشناس دیجیتال مارکتینگ (دورکاری)</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>موسسه طراحی و برنامه نویسی زیلا</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام کارشناس مدیریت ادعا</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>داده پردازی نیک آفرین</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام کارشناس حسابداری</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>خدمات کشتیرانی امواج دریا</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام کپی رایتر (copywriter)</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>مهر مام میهن</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام کارشناس وردپرس</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>امن پردازان سورنا</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام مسئول دفتر</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>رزین بتن برتر</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام BI Developer</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>آرتا زیست فارمد</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام مترجم زبان عربی</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>آریامدتور</p>
+                                <p><ion-icon name="location"></ion-icon>تهران</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام کارشناس فروش حضوری (زنجان)</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>اسنپ فود</p>
+                                <p><ion-icon name="location"></ion-icon>زنجان</p>
+                            </div>
+                          </div>
+                          <div class="recruitment">
+                            <a href="">استخدام کارشناس تست نرم افزار (مشهد)</a>
+                            <div class="details">
+                                <p><ion-icon name="storefront"></ion-icon>باراد مد</p>
+                                <p><ion-icon name="location"></ion-icon>مشهد</p>
+                            </div>
+                          </div>
+                    </div>
+                </article>
+                <aside>
+                    <header id="last-recruitments-header">
+                       <a href="">آخرین آگهی ها</a>
+                    </header>
+                    <div class="last-recruitments">
+                      <div class="last-recruitment">
+                        <a href="">استخدام طراح و گرافیست</a>
+                        <div class="last-recruitment-details">
+                          <p><ion-icon name="storefront"></ion-icon>شیدبان</p>
+                          <p><ion-icon name="location"></ion-icon>تهران</p>
+                      </div>
+                      </div>
+                      <div class="last-recruitment">
+                        <a href="">استخدام برنامه نویس وب (Asp.NET MVC)</a>
+                        <div class="last-recruitment-details">
+                          <p><ion-icon name="storefront"></ion-icon>اندیشه پرداز</p>
+                          <p><ion-icon name="location"></ion-icon>تهران</p>
+                      </div>
+                      </div>
+                      <div class="last-recruitment">
+                        <a href="">استخدام گرافیست و طراح (خانم)</a>
+                        <div class="last-recruitment-details">
+                          <p><ion-icon name="storefront"></ion-icon>تریتا</p>
+                          <p><ion-icon name="location"></ion-icon>تهران</p>
+                      </div>
+                      </div>
+                      <div class="last-recruitment">
+                        <a href="">استخدام Scrum Master</a>
+                        <div class="last-recruitment-details">
+                          <p><ion-icon name="storefront"></ion-icon>پینورست</p>
+                          <p><ion-icon name="location"></ion-icon>تهران</p>
+                      </div>
+                      </div>
+                      <div class="last-recruitment">
+                        <a href="">استخدام کارشناس UI/UX</a>
+                        <div class="last-recruitment-details">
+                          <p><ion-icon name="storefront"></ion-icon>مدرسه اینورس</p>
+                          <p><ion-icon name="location"></ion-icon>تهران</p>
+                      </div>
+                      </div>
+                      <div class="last-recruitment">
+                        <a href="">استخدام تایپیست (خانم)</a>
+                        <div class="last-recruitment-details">
+                          <p><ion-icon name="storefront"></ion-icon>مجموعه بین المللی کارین</p>
+                          <p><ion-icon name="location"></ion-icon>تهران</p>
+                      </div>
+                      </div>
+                      <div class="last-recruitment">
+                        <a href="">استخدام موشن گرافیست (خانم)</a>
+                        <div class="last-recruitment-details">
+                          <p><ion-icon name="storefront"></ion-icon>زرین گوهر آویست</p>
+                          <p><ion-icon name="location"></ion-icon>البرز</p>
+                      </div>
+                      </div>
+                      <div class="last-recruitment">
+                        <a href="">استخدام برنامه نویس ارشد .NET Core (مشهد)</a>
+                        <div class="last-recruitment-details">
+                          <p><ion-icon name="storefront"></ion-icon>شیدبان</p>
+                          <p><ion-icon name="location"></ion-icon>تهران</p>
+                      </div>
+                      </div>
+                      <div class="last-recruitment">
+                        <a href="">استخدام طراح و گرافیست</a>
+                        <div class="last-recruitment-details">
+                          <p><ion-icon name="storefront"></ion-icon>تاپ تیس</p>
+                          <p><ion-icon name="location"></ion-icon>خراسان رضوی</p>
+                      </div>
+                      </div>
+                      <div class="last-recruitment">
+                        <a href="">استخدام برنامه نویس ارشد Front-end (مشهد)</a>
+                        <div class="last-recruitment-details">
+                          <p><ion-icon name="storefront"></ion-icon>تاپ تیس</p>
+                          <p><ion-icon name="location"></ion-icon>خراسان رضوی</p>
+                      </div>
+                      </div>
+                      <div class="last-recruitment">
+                        <a href="">استخدام طراح و گرافیست</a>
+                        <div class="last-recruitment-details">
+                          <p><ion-icon name="storefront"></ion-icon>شیدبان</p>
+                          <p><ion-icon name="location"></ion-icon>تهران</p>
+                      </div>
+                      </div>
+                      <div class="last-recruitment">
+                        <a href="">استخدام کارشناس پشتیبانی سایت (خانم-حضوری)</a>
+                        <div class="last-recruitment-details">
+                          <p><ion-icon name="storefront"></ion-icon>رایان</p>
+                          <p><ion-icon name="location"></ion-icon>تهران</p>
+                      </div>
+                      </div>
+                      <div class="see-all-container">
+                        <a href="" id="see-all">مشاهده همه >></a>
+                      </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <div class="explains">
+     <div class="explain-container">
+      <div class="explain">
+        <div class="explain-header">
+          <img src="./images/1255268.png" alt="">
+          <h3>آشنایی با شرکت ها</h3>
+        </div>
+        <p>با معتبرترین شرکت های کشور آشنا شوید و محل کار آیننده خود را هوشمندانه انتخاب کنید.</p>
+        <a href="">مشاهده آشنایی با شرکت ها</a>
+      </div>
+      <div class="explain">
+        <div class="explain-header">
+          <img src="./images/1233844.png" alt="">
+          <h3>کشف فرصت های شغلی</h3>
+        </div>
+        <p>با جستجو در آگهی های استخدام, شغلی را انتخاب کنید که با شرایط ایده آل شما همخوانی دارد.</p>
+        <a href="">جستجو در فرصت های شغلی</a>
+      </div>
+      <div class="explain">
+        <div class="explain-header">
+          <img src="./images/1238650.png" alt="">
+          <h3>آگاهی از مشاغل جدید</h3>
+        </div>
+        <p>با کمک ایمیل های اطلاع رسانی, فرصت های شغلی مناسب خود را از طریق ایمیل دریافت کنید.</p>
+        <a href="">ایجاد ایمیل اطلاع رسانی</a>
+      </div>
+     </div>
+    </div>
+    <article class="blogs-container">
+      <div class="blogs">
+        <div class="blog">
+          <a href=""><img src="./images/cvbuilder.png" alt=""></a>
+        </div>
+        <div class="blog">
+          <div class="p-container">
+            <p class="p-1">جابینجا با معرفی فرصت‌های شغلی که هیچ جای دیگر نمی‌دیدم، به من کمک کرد تا موقعیت شغلی جدیدم را بهتر انتخاب کنم.</p>
+            <p class="p-2">بهزاد شعبانی</p>
+            <p class="p-3">برنامه‌نویس ارشد - کاموا</p>
+          </div>
+          <img id="blog-1-img" src="./images/e7f87708-94d3-4929-8cf8-c3385bf3c6c6.jpg" alt="">
+        </div>
+        <div class="blog-end">
+          <h2 class="blog-header">
+            از <a href="">وبلاگ</a> جابینجا  
+          </h2>
+          <div class="middle-blog"></div>
+          <div class="end-blogs">
+            <div>
+              <img src="./images/2_main.jpg" alt="">
+              <a href="">16 دلیل برای اینکه هنوز بیکار هستید</a>
+            </div>
+            <div>
+              <img src="./images/1_main.png" alt="">
+              <a href="">10 کاری که افراد موفق بعد از ساعات کاری انجام میدهند!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-part">
+          <h4>کارجویان</h4>
+          <div class="footer-tags">
+            <a href="">آگهی های استخدام</a>
+            <a href="">ایمیل های اطلاع رسانی</a>
+            <a href="">رزومه ساز آنلاین</a>
+            <a href="">آشنایی با شرکت ها</a>
+          </div>
+        </div>
+        <div class="footer-part">
+          <h4>میانبرها</h4>
+          <div class="footer-tags">
+           <a href="">درخواست های من</a>
+           <a href="">ایمیل های اطلاع رسانی من</a>
+           <a href="">رزومه ساز</a>
+           <a href="">مشاهده رزومه</a>
+           <a href="">تنظیمات حساب کاربری</a>
+           <a href="">فرصت های شغلی پیشنهادی من</a> 
+          </div>
+        </div>
+        <div class="footer-part">
+          <h4>جابینجا</h4>
+          <div class="footer-tags">
+            <a href="">تماس با جابینجا</a>
+            <a href="">جابینجا در رسانه ها</a>
+            <a href="">راهنمای استفاده برای کارجویان</a>
+            <a href="">وبلاگ</a>
+          </div>
+        </div>
+        <div class="footer-part">
+          <h4>جابینجا در شبکه های اجتماعی</h4>
+          <div class="footer-tags">
+            <div class="footer-social">
+              <a href=""><span style="color:indianred ;" class="fab fa-instagram"></span></a>
+              <a href=""><span style="color:rgba(0, 175, 241, 0.9) ;" class="fab fa-twitter"></span></a>
+              <a href=""><span style="color:rgba(0, 175, 241, 0.9) ;" class="fab fa-telegram"></span></a>
+              <a href=""><span style="color: #1988b8;" class="fab fa-linkedin"></span></a>
+            </div>
+            <h3>jobinja</h3>
+            <p>با معتبرترین شرکت‌های کشور آشنا شوید و محل کار آینده خود را هوشمندانه انتخاب کنید.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+          var check=true;
+         $("#menu-button").click(function(){
+            if(check){
+              $("#responsive-menu-container").css('display','flex');
+              check=false
+            }
+            else{
+              $("#responsive-menu-container").css('display','none');
+              check=true
+            }
+         })
+    </script>
+</body>
+</html>

@@ -1,0 +1,605 @@
+$color: red;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: IRANSansWeb;
+}
+@font-face {
+  font-family: "IRANSansWeb";
+  src: url("./fonts/IRANSansWeb.woff2") format("woff2"),
+    url("./fonts/IRANSansWeb.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  overflow-x: hidden;
+}
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #444444;
+  padding: 0 50px;
+  position: fixed;
+  z-index: 100;
+}
+.nav-container {
+  height: 60px;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  div {
+    display: flex;
+    align-items: center;
+  }
+  button {
+    white-space: nowrap;
+    cursor: pointer;
+    height: 100%;
+    font-weight: 500;
+    font-size: 0.8rem;
+    background-color: transparent;
+    color: rgba($color: #ffffff, $alpha: 0.9);
+    border: none;
+    padding: 15px 20px;
+    border-left: 2px solid rgba($color: #000000, $alpha: 0.1);
+    border-right: 2px solid rgba($color: gray, $alpha: 0.2);
+    ion-icon {
+      margin-left: 5px;
+    }
+  }
+  a {
+    white-space: nowrap;
+    font-size: 0.8rem;
+    color: rgba($color: #ffffff, $alpha: 0.9);
+    text-decoration: none;
+    padding: 10px 10px;
+    display: inline-block;
+    ion-icon {
+      color: rgba($color: #777777, $alpha: 0.8);
+      margin-left: 5px;
+    }
+  }
+  .bell-container {
+    padding-top: 5px;
+  }
+  #bell {
+    font-size: 1.7rem;
+    font-weight: bolder;
+  }
+}
+#org-header {
+  color: rgba($color: #000000, $alpha: 0.9);
+  font-size: 0.9rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 382px;
+  width: 100%;
+  background: url(./images/hero4.jpg) no-repeat center/cover;
+  .about {
+    margin-top: 50px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 20px 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: auto;
+    background: rgba($color: #ffffff, $alpha: 0.9);
+    a {
+      display: inline-block;
+      text-decoration: none;
+      line-height: 1.1;
+      border-bottom: 2px dashed red;
+      margin: 0px 10px;
+      color: red;
+    }
+  }
+  .filter {
+    padding: 20px 15px;
+    border-radius: 3px;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    input {
+      color: rgba($color: #777777, $alpha: 0.9);
+      border-radius: 3px;
+      font-size: 1.1rem;
+      padding: 5px 10px;
+      border: none;
+      outline: none;
+    }
+    select {
+      color: rgba($color: #000000, $alpha: 0.7);
+      font-size: 1.1rem;
+      padding: 5px 30px;
+    }
+    select::-webkit-scrollbar {
+      background-color: #e5e5e5;
+      width: 8px;
+      border-radius: 3px;
+    }
+    select::-webkit-scrollbar-thumb {
+      background-color: #727272;
+      border-radius: 3px;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      font-size: 1.1rem;
+      padding: 5px 20px;
+      border-radius: 5px;
+      background-color: #ffd64a;
+      &:hover {
+        background-color: #ffd69a;
+      }
+    }
+  }
+  .send-propozal {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: rgba($color: #ffffff, $alpha: 0.9);
+    letter-spacing: 1px;
+    a {
+      text-decoration: none;
+      color: #1988b8;
+    }
+  }
+}
+#org-header::after {
+  cursor: pointer;
+  color: white;
+  padding: 10px 20px;
+  width: 100%;
+  position: absolute;
+  top: 338px;
+  content: "مشاهده همه آگهی های استخدام";
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 175, 241, 0.9) 0%,
+    rgba(0, 208, 97, 0.9) 100%
+  );
+}
+main {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.main-container {
+  width: 1160px;
+  .companies {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    .company {
+      overflow: hidden;
+      border: 1px solid rgba($color: #000000, $alpha: 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 15px;
+      a {
+        margin-top: 10px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        text-decoration: none;
+        color: #1988b8;
+      }
+    }
+  }
+}
+.recruitment-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 43px;
+  .immediate-recruitment {
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    width: 751px;
+    header {
+      padding: 10px 20px;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+    }
+  }
+  aside {
+    width: 366px;
+    border-top: none;
+  }
+}
+.recruitments {
+  padding: 20px 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  .recruitment {
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    height: 80px;
+    display: grid;
+    align-items: center;
+    position: relative;
+    border-radius: 3px;
+    padding: 10px 10px;
+    a {
+      font-size: 0.8rem;
+      color: #1988b8;
+      text-decoration: none;
+    }
+    .details {
+      display: flex;
+      font-size: 0.8rem;
+      color: rgba($color: #000000, $alpha: 0.5);
+      ion-icon {
+        margin: 0px 5px;
+      }
+    }
+  }
+  .recruitment::after {
+    content: "فوری";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.8rem;
+    background-color: #d84a3e;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+  }
+}
+#last-recruitments-header {
+  a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #1988b8;
+    border-right: 1px solid rgba($color: #000000, $alpha: 0.2);
+    border-left: 1px solid rgba($color: #000000, $alpha: 0.2);
+    border-top: 5px solid #1988b8;
+  }
+}
+.last-recruitments {
+  padding: 20px;
+  position: relative;
+  margin-top: 10px;
+  border-right: 1px solid rgba($color: #000000, $alpha: 0.2);
+  border-left: 1px solid rgba($color: #000000, $alpha: 0.2);
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+  overflow: hidden;
+}
+.see-all-container {
+  width: 100%;
+  display: flex;
+  margin-top: 25px;
+  justify-content: flex-end;
+  a {
+    text-decoration: none;
+    color: rgba(0, 175, 241, 0.9);
+    &:hover {
+      color: #1988b8;
+    }
+  }
+}
+.last-recruitments::after {
+  content: "______________________________";
+  width: 29.1ch;
+  text-overflow: clip;
+  position: absolute;
+  top: -18px;
+  left: -53px;
+  color: rgba($color: #000000, $alpha: 0.2);
+}
+
+.last-recruitment {
+  position: relative;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+  padding: 10px;
+  a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: rgba($color: #000000, $alpha: 0.8);
+    &:hover {
+      color: #1988b8;
+    }
+  }
+  .last-recruitment-details {
+    display: flex;
+    p {
+      font-size: 0.8rem;
+      color: rgba($color: #000000, $alpha: 0.5);
+      ion-icon {
+        margin: 0px 5px;
+      }
+    }
+  }
+}
+.last-recruitment::after {
+  content: "امروز";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: rgba($color: #000000, $alpha: 0.5);
+  font-size: 0.8rem;
+}
+.last-recruitment:last-child {
+  border-bottom: none;
+}
+.explains {
+  background-color: #eeeeee;
+  border-top: 1px solid rgba($color: #000000, $alpha: 0.3);
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.3);
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  .explain-container {
+    padding: 20px 0px;
+    width: 1160px;
+    display: flex;
+    justify-content: space-between;
+    .explain {
+      .explain-header {
+        display: flex;
+        align-items: baseline;
+        h3 {
+          margin-right: 15px;
+          font-size: 1.3rem;
+          color: rgba($color: #000000, $alpha: 0.7);
+        }
+        img {
+          max-width: 35px;
+        }
+      }
+      p {
+        width: 40ch;
+        font-size: 0.9rem;
+        color: rgba($color: #000000, $alpha: 0.7);
+      }
+      a {
+        text-decoration: none;
+        color: rgba(0, 175, 241, 0.9);
+        font-size: 0.9rem;
+        &:hover {
+          color: #1988b8;
+        }
+      }
+    }
+  }
+}
+.blogs-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  .blogs {
+    width: 1160px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    .blog {
+      height: 455px;
+      overflow: hidden;
+      .p-container {
+        position: relative;
+        padding: 30px 30px;
+        background-color: #444444;
+        color: white;
+        .p-1 {
+          width: 35ch;
+        }
+        .p-2 {
+          font-size: 0.9rem;
+          margin-top: 5px;
+        }
+        .p-3 {
+          font-size: 0.9rem;
+          color: rgba($color: #ffffff, $alpha: 0.7);
+          margin-top: 5px;
+        }
+      }
+      .p-container::after {
+        background: url(./images/1239297.png) center/cover no-repeat;
+        content: "";
+        height: 40px;
+        width: 40px;
+        opacity: 0.4;
+        position: absolute;
+        top: 70%;
+        left: 20px;
+      }
+      #blog-1-img {
+        width: 100%;
+      }
+    }
+    .blog-end {
+      display: flex;
+      flex-direction: column;
+      .middle-blog {
+        position: relative;
+        background: url(./images/1_main.jpg) center/cover no-repeat;
+        width: 366px;
+        height: 207px;
+      }
+      .middle-blog::after {
+        content: "5 نکته برای یافتن شغل رویایی تان";
+        color: white;
+        width: 100%;
+        position: absolute;
+        top: 78%;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        background: rgba($color: #000000, $alpha: 0.5);
+      }
+      .end-blogs {
+        div {
+          display: flex;
+          margin: 20px 0;
+          img {
+            width: 141px;
+          }
+          a {
+            color: rgba($color: #000000, $alpha: 0.7);
+            text-decoration: none;
+            font-size: 0.8rem;
+            display: inline-block;
+            padding: 0px 15px;
+          }
+        }
+      }
+      .blog-header {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: rgba($color: #000000, $alpha: 0.6);
+        a {
+          color: rgba(0, 175, 241, 0.9);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+footer {
+  background-color: #444444;
+  display: flex;
+  justify-content: center;
+  // width: 100vw;
+  .footer-container {
+    padding: 30px 0;
+    width: 1160px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    .footer-part {
+      h4 {
+        color: rgba($color: #ffffff, $alpha: 0.5);
+        font-weight: 500;
+        border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+      }
+      .footer-tags {
+        display: flex;
+        flex-direction: column;
+        a {
+          color: rgba($color: #ffffff, $alpha: 0.8);
+          text-decoration: none;
+          margin: 5px 0;
+          font-size: 0.9rem;
+          font-weight: 400;
+          &:hover {
+            color: #f38d39;
+          }
+        }
+        .footer-social {
+          margin: 10px 0;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          span {
+            font-size: 2rem;
+          }
+        }
+        h3 {
+          color: rgba($color: #ffffff, $alpha: 0.5);
+        }
+        p {
+          width: 30ch;
+          color: rgba($color: #ffffff, $alpha: 0.5);
+        }
+      }
+    }
+  }
+}
+.responsive-nav-container {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  a {
+    text-decoration: none;
+    color: rgba($color: #ffffff, $alpha: 0.4);
+    h2 {
+      color: rgba($color: #ffffff, $alpha: 0.8);
+    }
+    ion-icon {
+      font-size: 1.5rem;
+    }
+  }
+  .right {
+    display: flex;
+    div {
+      font-size: 1.5rem;
+      color: rgba($color: #ffffff, $alpha: 0.5);
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+}
+#responsive-menu-container {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  z-index: 100000;
+  border: none;
+  #responsive-menu {
+    width: 70%;
+    background-color: #444444;
+    display: flex;
+    flex-direction: column;
+    button {
+      padding: 20px 20px;
+      background-color: transparent;
+      color: rgba($color: #ffffff, $alpha: 0.8);
+      font-size: 1.2rem;
+      text-align: right;
+      cursor: pointer;
+    }
+  }
+}
+@media screen and (max-width: 1067px) {
+  .responsive-nav-container {
+    display: flex;
+  }
+  .nav-container {
+    display: none;
+  }
+  .filter {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    select {
+      display: none;
+    }
+    input {
+      margin-bottom: 10px;
+    }
+  }
+  .about {
+    font-size: 0.5rem;
+  }
+  .send-propozal {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 1169px) {
+  .companies {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 226px) !important;
+  }
+  .recruitment-container {
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    .immediate-recruitment {
+      width: 100%;
+    }
+    aside {
+      width: 100%;
+    }
+  }
+ 
+}

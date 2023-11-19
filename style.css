@@ -13,606 +13,658 @@
   font-style: normal;
   font-display: swap;
 }
-body {
-  overflow-x: hidden;
-}
-
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: #444444;
-  padding: 0 50px;
-  position: fixed;
-  z-index: 100;
-}
-
-.nav-container {
-  height: 60px;
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.nav-container div {
-  display: flex;
-  align-items: center;
-}
-.nav-container button {
-  white-space: nowrap;
-  cursor: pointer;
-  height: 100%;
-  font-weight: 500;
-  font-size: 0.8rem;
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.9);
-  border: none;
-  padding: 15px 20px;
-  border-left: 2px solid rgba(0, 0, 0, 0.1);
-  border-right: 2px solid rgba(128, 128, 128, 0.2);
-}
-.nav-container button ion-icon {
-  margin-left: 5px;
-}
-.nav-container a {
-  white-space: nowrap;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.9);
-  text-decoration: none;
-  padding: 10px 10px;
-  display: inline-block;
-}
-.nav-container a ion-icon {
-  color: rgba(119, 119, 119, 0.8);
-  margin-left: 5px;
-}
-.nav-container .bell-container {
-  padding-top: 5px;
-}
-.nav-container #bell {
-  font-size: 1.7rem;
-  font-weight: bolder;
-}
-
-#org-header {
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 0.9rem;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 382px;
-  width: 100%;
-  background: url(./images/hero4.jpg) no-repeat center/cover;
-}
-#org-header .about {
-  margin-top: 50px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  padding: 20px 20px;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  width: auto;
-  background: rgba(255, 255, 255, 0.9);
-}
-#org-header .about a {
-  display: inline-block;
-  text-decoration: none;
-  line-height: 1.1;
-  border-bottom: 2px dashed red;
-  margin: 0px 10px;
-  color: red;
-}
-#org-header .filter {
-  padding: 20px 15px;
-  border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-#org-header .filter input {
-  color: rgba(119, 119, 119, 0.9);
-  border-radius: 3px;
-  font-size: 1.1rem;
-  padding: 5px 10px;
-  border: none;
-  outline: none;
-}
-#org-header .filter select {
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 1.1rem;
-  padding: 5px 30px;
-}
-#org-header .filter select::-webkit-scrollbar {
-  background-color: #e5e5e5;
-  width: 8px;
-  border-radius: 3px;
-}
-#org-header .filter select::-webkit-scrollbar-thumb {
-  background-color: #727272;
-  border-radius: 3px;
-}
-#org-header .filter button {
-  cursor: pointer;
-  border: none;
-  font-size: 1.1rem;
-  padding: 5px 20px;
-  border-radius: 5px;
-  background-color: #ffd64a;
-}
-#org-header .filter button:hover {
-  background-color: #ffd69a;
-}
-#org-header .send-propozal {
-  font-size: 0.8rem;
-  margin-top: 5px;
-  padding: 5px 15px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 1px;
-}
-#org-header .send-propozal a {
-  text-decoration: none;
-  color: #1988b8;
-}
-
-#org-header::after {
-  cursor: pointer;
-  color: white;
-  padding: 10px 20px;
-  width: 100%;
-  position: absolute;
-  top: 338px;
-  content: "مشاهده همه آگهی های استخدام";
-  text-align: center;
-  background: linear-gradient(90deg, rgba(0, 175, 241, 0.9) 0%, rgba(0, 208, 97, 0.9) 100%);
-}
-
-main {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.main-container {
-  width: 1160px;
-}
-.main-container .companies {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 10px;
-}
-.main-container .companies .company {
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 15px;
-}
-.main-container .companies .company a {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  white-space: nowrap;
-  text-decoration: none;
-  color: #1988b8;
-}
-
-.recruitment-container {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 43px;
-}
-.recruitment-container .immediate-recruitment {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  width: 751px;
-}
-.recruitment-container .immediate-recruitment header {
-  padding: 10px 20px;
-  background-color: #f9f9f9;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-.recruitment-container aside {
-  width: 366px;
-  border-top: none;
-}
-
-.recruitments {
-  padding: 20px 15px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-}
-.recruitments .recruitment {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  height: 80px;
-  display: grid;
-  align-items: center;
-  position: relative;
-  border-radius: 3px;
-  padding: 10px 10px;
-}
-.recruitments .recruitment a {
-  font-size: 0.8rem;
-  color: #1988b8;
-  text-decoration: none;
-}
-.recruitments .recruitment .details {
-  display: flex;
-  font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.5);
-}
-.recruitments .recruitment .details ion-icon {
-  margin: 0px 5px;
-}
-.recruitments .recruitment::after {
-  content: "فوری";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 0.8rem;
-  background-color: #d84a3e;
-  color: white;
-  padding: 3px;
-  border-radius: 5px;
-}
-
-#last-recruitments-header a {
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #1988b8;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  border-top: 5px solid #1988b8;
-}
-
-.last-recruitments {
-  padding: 20px;
-  position: relative;
-  margin-top: 10px;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-.see-all-container {
-  width: 100%;
-  display: flex;
-  margin-top: 25px;
-  justify-content: flex-end;
-}
-.see-all-container a {
-  text-decoration: none;
-  color: rgba(0, 175, 241, 0.9);
-}
-.see-all-container a:hover {
-  color: #1988b8;
-}
-
-.last-recruitments::after {
-  content: "______________________________";
-  width: 29.1ch;
-  text-overflow: clip;
-  position: absolute;
-  top: -18px;
-  left: -53px;
-  color: rgba(0, 0, 0, 0.2);
-}
-
-.last-recruitment {
-  position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 10px;
-}
-.last-recruitment a {
-  font-size: 0.8rem;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.8);
-}
-.last-recruitment a:hover {
-  color: #1988b8;
-}
-.last-recruitment .last-recruitment-details {
-  display: flex;
-}
-.last-recruitment .last-recruitment-details p {
-  font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.5);
-}
-.last-recruitment .last-recruitment-details p ion-icon {
-  margin: 0px 5px;
-}
-
-.last-recruitment::after {
-  content: "امروز";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 0.8rem;
-}
-
-.last-recruitment:last-child {
-  border-bottom: none;
-}
-
-.explains {
-  background-color: #eeeeee;
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-.explains .explain-container {
-  padding: 20px 0px;
-  width: 1160px;
-  display: flex;
-  justify-content: space-between;
-}
-.explains .explain-container .explain .explain-header {
-  display: flex;
-  align-items: baseline;
-}
-.explains .explain-container .explain .explain-header h3 {
-  margin-right: 15px;
-  font-size: 1.3rem;
-  color: rgba(0, 0, 0, 0.7);
-}
-.explains .explain-container .explain .explain-header img {
-  max-width: 35px;
-}
-.explains .explain-container .explain p {
-  width: 40ch;
-  font-size: 0.9rem;
-  color: rgba(0, 0, 0, 0.7);
-}
-.explains .explain-container .explain a {
-  text-decoration: none;
-  color: rgba(0, 175, 241, 0.9);
-  font-size: 0.9rem;
-}
-.explains .explain-container .explain a:hover {
-  color: #1988b8;
-}
-
-.blogs-container {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-}
-.blogs-container .blogs {
-  width: 1160px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 15px;
-}
-.blogs-container .blogs .blog {
-  height: 455px;
-  overflow: hidden;
-}
-.blogs-container .blogs .blog .p-container {
-  position: relative;
-  padding: 30px 30px;
-  background-color: #444444;
-  color: white;
-}
-.blogs-container .blogs .blog .p-container .p-1 {
-  width: 35ch;
-}
-.blogs-container .blogs .blog .p-container .p-2 {
-  font-size: 0.9rem;
-  margin-top: 5px;
-}
-.blogs-container .blogs .blog .p-container .p-3 {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin-top: 5px;
-}
-.blogs-container .blogs .blog .p-container::after {
-  background: url(./images/1239297.png) center/cover no-repeat;
-  content: "";
-  height: 40px;
-  width: 40px;
-  opacity: 0.4;
-  position: absolute;
-  top: 70%;
-  left: 20px;
-}
-.blogs-container .blogs .blog #blog-1-img {
-  width: 100%;
-}
-.blogs-container .blogs .blog-end {
-  display: flex;
-  flex-direction: column;
-}
-.blogs-container .blogs .blog-end .middle-blog {
-  position: relative;
-  background: url(./images/1_main.jpg) center/cover no-repeat;
-  width: 366px;
-  height: 207px;
-}
-.blogs-container .blogs .blog-end .middle-blog::after {
-  content: "5 نکته برای یافتن شغل رویایی تان";
-  color: white;
-  width: 100%;
-  position: absolute;
-  top: 78%;
-  padding: 10px 10px;
-  box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.5);
-}
-.blogs-container .blogs .blog-end .end-blogs div {
-  display: flex;
-  margin: 20px 0;
-}
-.blogs-container .blogs .blog-end .end-blogs div img {
-  width: 141px;
-}
-.blogs-container .blogs .blog-end .end-blogs div a {
-  color: rgba(0, 0, 0, 0.7);
-  text-decoration: none;
-  font-size: 0.8rem;
-  display: inline-block;
-  padding: 0px 15px;
-}
-.blogs-container .blogs .blog-end .blog-header {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: rgba(0, 0, 0, 0.6);
-}
-.blogs-container .blogs .blog-end .blog-header a {
-  color: rgba(0, 175, 241, 0.9);
-  text-decoration: none;
-}
-
-footer {
-  background-color: #444444;
-  display: flex;
-  justify-content: center;
-}
-footer .footer-container {
-  padding: 30px 0;
-  width: 1160px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 15px;
-}
-footer .footer-container .footer-part h4 {
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 500;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-footer .footer-container .footer-part .footer-tags {
-  display: flex;
-  flex-direction: column;
-}
-footer .footer-container .footer-part .footer-tags a {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  margin: 5px 0;
-  font-size: 0.9rem;
-  font-weight: 400;
-}
-footer .footer-container .footer-part .footer-tags a:hover {
-  color: #f38d39;
-}
-footer .footer-container .footer-part .footer-tags .footer-social {
-  margin: 10px 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-footer .footer-container .footer-part .footer-tags .footer-social span {
-  font-size: 2rem;
-}
-footer .footer-container .footer-part .footer-tags h3 {
-  color: rgba(255, 255, 255, 0.5);
-}
-footer .footer-container .footer-part .footer-tags p {
-  width: 30ch;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.responsive-nav-container {
-  display: none;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 20px;
-}
-.responsive-nav-container a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.4);
-}
-.responsive-nav-container a h2 {
-  color: rgba(255, 255, 255, 0.8);
-}
-.responsive-nav-container a ion-icon {
-  font-size: 1.5rem;
-}
-.responsive-nav-container .right {
-  display: flex;
-}
-.responsive-nav-container .right div {
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.5);
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-#responsive-menu-container {
-  position: absolute;
-  top: 60px;
-  width: 100%;
-  display: none;
-  justify-content: center;
-  z-index: 100000;
-  border: none;
-}
-#responsive-menu-container #responsive-menu {
-  width: 70%;
-  background-color: #444444;
-  display: flex;
-  flex-direction: column;
-}
-#responsive-menu-container #responsive-menu button {
-  padding: 20px 20px;
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.2rem;
-  text-align: right;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 1067px) {
-  .responsive-nav-container {
+  nav {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    background-color: #444444;
+    padding: 0 50px;
+    position: fixed;
+    z-index: 100;
   }
-
+  .icon-container ion-icon{
+    font-size: 1rem;
+    vertical-align: middle;
+  }
   .nav-container {
-    display: none;
+    height: 60px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-container div {
+    display: flex;
+    align-items: center;
+  }
+  .nav-container button {
+    white-space: nowrap;
+    cursor: pointer;
+    height: 100%;
+    font-weight: 500;
+    font-size: 0.8rem;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 15px 20px;
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+    border-right: 2px solid rgba(128, 128, 128, 0.2);
+  }
+  .nav-container button ion-icon {
+    margin-left: 5px;
+  }
+  .nav-container a {
+    white-space: nowrap;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    padding: 10px 10px;
+    display: inline-block;
+  }
+  .nav-container a ion-icon {
+    color: rgba(119, 119, 119, 0.8);
+    margin-left: 5px;
+  }
+  .nav-container .bell-container {
+    padding-top: 5px;
+  }
+  .nav-container #bell {
+    font-size: 1.7rem;
+    font-weight: bolder;
   }
 
-  .filter {
-    width: 75%;
+  #org-header {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 0.9rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 382px;
+    width: 100%;
+    background: url(./images/hero4.jpg) no-repeat center/cover;
+  }
+  #org-header .about {
+    margin-top: 50px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 20px 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: auto;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  #org-header .about a {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1.1;
+    border-bottom: 2px dashed red;
+    margin: 0px 10px;
+    color: red;
+  }
+  #org-header .filter {
+    padding: 20px 15px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  #org-header .filter input {
+    color: rgba(119, 119, 119, 0.9);
+    border-radius: 3px;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+  }
+  #org-header .filter select {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.1rem;
+    padding: 5px 30px;
+  }
+  #org-header .filter select::-webkit-scrollbar {
+    background-color: #e5e5e5;
+    width: 8px;
+    border-radius: 3px;
+  }
+  #org-header .filter select::-webkit-scrollbar-thumb {
+    background-color: #727272;
+    border-radius: 3px;
+  }
+  #org-header .filter button {
+    cursor: pointer;
+    border: none;
+    font-size: 1.1rem;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: #ffd64a;
+  }
+  #org-header .filter button:hover {
+    background-color: #ffd69a;
+  }
+  #org-header .send-propozal {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 1px;
+  }
+  #org-header .send-propozal a {
+    text-decoration: none;
+    color: #1988b8;
+  }
+
+  #org-header::after {
+    cursor: pointer;
+    color: white;
+    padding: 10px 20px;
+  width: 200px;
+    position: absolute;
+    top: 338px;
+    content: "مشاهده همه آگهی های استخدام";
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: linear-gradient(90deg, rgba(0, 175, 241, 0.9) 0%, rgba(0, 208, 97, 0.9) 100%);
+  }
+
+  main {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .main-container {
+    width: 1160px;
+  }
+  .main-container .companies {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    padding: 0 10px;
+  }
+  .main-container .companies .company {
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
   }
-  .filter select {
-    display: none;
-  }
-  .filter input {
-    margin-bottom: 10px;
-  }
-
-  .about {
-    font-size: 0.5rem;
-  }
-
-  .send-propozal {
-    margin: 20px 0;
-  }
-}
-@media screen and (max-width: 1169px) {
-  .companies {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(3, 226px) !important;
+  .main-container .companies .company a {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #1988b8;
   }
 
   .recruitment-container {
-    padding: 10px 30px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 43px;
+  }
+  .recruitment-container .immediate-recruitment {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 751px;
+  }
+  .recruitment-container .immediate-recruitment header {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .recruitment-container aside {
+    width: 366px;
+    border-top: none;
+  }
+
+  .recruitments {
+    padding: 20px 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:10px 20px;
+  }
+  .recruitments .recruitment {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    height: 80px;
+    display: grid;
+    align-items: center;
+    position: relative;
+    border-radius: 3px;
+    padding: 10px 10px;
+  }
+  .recruitments .recruitment a {
+    font-size: 0.8rem;
+    color: #1988b8;
+    text-decoration: none;
+  }
+  .recruitments .recruitment .details {
+    display: flex;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .recruitments .recruitment .details ion-icon {
+    margin: 0px 5px;
+  }
+  .recruitments .recruitment::after {
+    content: "فوری";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.8rem;
+    background-color: #d84a3e;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+  }
+
+  #last-recruitments-header button {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #1988b8;
+    background: #fff;
+    border-bottom: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 5px solid #1988b8;
+  }
+
+  .last-recruitments {
+    padding: 20px;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+
+  .see-all-container {
+    width: 100%;
+    display: flex;
+    margin-top: 25px;
+    justify-content: flex-end;
+  }
+  .see-all-container a {
+    text-decoration: none;
+    color: rgba(0, 175, 241, 0.9);
+  }
+  .see-all-container a:hover {
+    color: #1988b8;
+  }
+
+  .last-recruitment {
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  .last-recruitment a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .last-recruitment a:hover {
+    color: #1988b8;
+  }
+  .last-recruitment .last-recruitment-details {
+    display: flex;
+  }
+  .last-recruitment .last-recruitment-details p {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .last-recruitment .last-recruitment-details p ion-icon {
+    margin: 0px 5px;
+  }
+
+  .last-recruitment::after {
+    content: "امروز";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.8rem;
+  }
+
+  .last-recruitment:last-child {
+    border-bottom: none;
+  }
+
+  .explains {
+    background-color: #eeeeee;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+  }
+  .explains .explain-container {
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 1160px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+  }
+  .explains .explain-container .explain .explain-header {
+    display: flex;
+    align-items: baseline;
+  }
+  .explains .explain-container .explain .explain-header h3 {
+    margin-right: 15px;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .explains .explain-container .explain .explain-header img {
+    max-width: 35px;
+  }
+  .explains .explain-container .explain p {
+    width: 40ch;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .explains .explain-container .explain a {
+    text-decoration: none;
+    color: rgba(0, 175, 241, 0.9);
+    font-size: 0.9rem;
+  }
+  .explains .explain-container .explain a:hover {
+    color: #1988b8;
+  }
+
+  .blogs-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .blogs-container .blogs {
+    width: 100%;
+    max-width: 1160px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+  }
+  .blogs-container .blogs .blog {
+    height: 455px;
+    overflow: hidden;
+  }
+  .blogs-container .blogs .blog .p-container {
+    position: relative;
+    padding: 30px 30px;
+    background-color: #444444;
+    color: white;
+  }
+  .blogs-container .blogs .blog .p-container .p-1 {
+    width: 35ch;
+  }
+  .blogs-container .blogs .blog .p-container .p-2 {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  .blogs-container .blogs .blog .p-container .p-3 {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 5px;
+  }
+  .blogs-container .blogs .blog .p-container::after {
+    background: url(./images/1239297.png) center/cover no-repeat;
+    content: "";
+    height: 40px;
+    width: 40px;
+    opacity: 0.4;
+    position: absolute;
+    top: 70%;
+    left: 20px;
+  }
+  .blogs-container .blogs .blog #blog-1-img {
+    width: 100%;
+  }
+  .blogs-container .blogs .blog-end {
     display: flex;
     flex-direction: column;
   }
-  .recruitment-container .immediate-recruitment {
-    width: 100%;
+  .blogs-container .blogs .blog-end .middle-blog {
+    position: relative;
+    background: url(./images/1_main.jpg) center/cover no-repeat;
+    width: 366px;
+    height: 207px;
   }
-  .recruitment-container aside {
+  .blogs-container .blogs .blog-end .middle-blog::after {
+    content: "5 نکته برای یافتن شغل رویایی تان";
+    color: white;
     width: 100%;
+    position: absolute;
+    top: 78%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
   }
-}
+  .blogs-container .blogs .blog-end .end-blogs div {
+    display: flex;
+    margin: 20px 0;
+  }
+  .blogs-container .blogs .blog-end .end-blogs div img {
+    width: 141px;
+  }
+  .blogs-container .blogs .blog-end .end-blogs div a {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    width: 30ch;
+    font-size: 0.8rem;
+    display: inline-block;
+    padding: 0px 15px;
+  }
+  .blogs-container .blogs .blog-end .blog-header {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .blogs-container .blogs .blog-end .blog-header a {
+    color: rgba(0, 175, 241, 0.9);
+    text-decoration: none;
+  }
 
-/*# sourceMappingURL=style.css.map */
+  footer {
+    background-color: #444444;
+    display: flex;
+    justify-content: center;
+  }
+  footer .footer-container {
+    padding: 30px 20px;
+    width: 1160px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+  }
+  footer .footer-container .footer-part h4 {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  footer .footer-container .footer-part .footer-tags {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-container .footer-part .footer-tags a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  footer .footer-container .footer-part .footer-tags a:hover {
+    color: #f38d39;
+  }
+  footer .footer-container .footer-part .footer-tags .footer-social {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  footer .footer-container .footer-part .footer-tags .footer-social span {
+    font-size: 2rem;
+  }
+  footer .footer-container .footer-part .footer-tags h3 {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  footer .footer-container .footer-part .footer-tags p {
+    width: 30ch;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .responsive-nav-container {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 10px 0;
+  }
+  .responsive-nav-container a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .responsive-nav-container a h2 {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .responsive-nav-container a ion-icon {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+  }
+  .responsive-nav-container .right {
+    display: flex;
+  }
+  .responsive-nav-container .right div {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  #responsive-menu-container {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    z-index: 100000;
+    border: none;
+  }
+  #responsive-menu-container #responsive-menu {
+    width: 70%;
+    background-color: #444444;
+    display: flex;
+    flex-direction: column;
+  }
+  #responsive-menu-container #responsive-menu button {
+    padding: 20px 20px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    text-align: right;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 1067px) {
+    .responsive-nav-container {
+      display: flex;
+    }
+    .explain-container .explain:nth-of-type(3) {
+      margin: 0 auto;
+    }
+    .blogs-container .blogs {
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+    }
+    .blogs-container .blogs .blog-end{
+      grid-column: 1 / span 2;
+    }
+    .explain-container{
+    grid-template-columns: repeat(2,1fr) !important;
+    }
+    .nav-container {
+      display: none;
+    }
+
+    .filter {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+    }
+    .filter select {
+      display: none;
+    }
+    .filter input {
+      margin-bottom: 10px;
+    }
+
+    .about {
+      font-size: 0.5rem;
+    }
+
+    .send-propozal {
+      margin: 20px 0;
+    }
+  }
+  @media screen and (max-width: 1169px) {
+    .companies {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(3, 226px) !important;
+    }
+
+    .recruitment-container {
+      padding: 10px 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    .recruitment-container .immediate-recruitment {
+      width: 100%;
+    }
+    .recruitment-container aside {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    footer .footer-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 40px 30px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    #org-header .send-propozal {
+      display: none;
+    }
+    footer .footer-container {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 40px 30px;
+    }
+  nav{
+    padding: 0 20px;
+  }
+  .explain-container{
+    grid-template-columns: repeat(1,1fr) !important;
+    }
+  .main-container .companies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 10px;
+  }
+  .recruitments {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .recruitment-container {
+    padding: 10px;
+  }
+  .blogs-container .blogs {
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+  }
+  .blogs-container .blogs .blog-end{
+    grid-column: auto;
+  }
+  }
+
+  /*# sourceMappingURL=style.css.map */

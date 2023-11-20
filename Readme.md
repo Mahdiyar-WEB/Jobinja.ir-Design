@@ -6,7 +6,7 @@ main page design from jobinja website
 
 <h2>🚀 Demo</h2>
 
- [https://mahdiyar-web.github.io/Dlfox.com-Design/](https://mahdiyar-web.github.io/Dlfox.com-Design/](https://mahdiyar-web.github.io/Jobinja.ir-Design/))
+ https://mahdiyar-web.github.io/Jobinja.ir-Design/
 
   
   
